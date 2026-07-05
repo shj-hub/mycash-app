@@ -50,14 +50,14 @@ font-size:20px;
 type="date"
 id="date">
 
-<select id="財源">
+<select id="source">
 
 <option>個人</option>
 <option>家計</option>
 
 </select>
 
-<select id="分類">
+<select id="category">
 
 <option>食費</option>
 <option>交通費</option>
@@ -68,7 +68,7 @@ id="date">
 
 </select>
 
-<select id="支払方法">
+<select id="method">
 
 <option>クレジット</option>
 <option>現金</option>
@@ -98,11 +98,11 @@ function save(){
 
 const data={
 
-date:document.getElementById("date").value,
+date:document.getElementById("source").value,
 
-shop:document.getElementById("shop").value,
+shop:document.getElementById("category").value,
 
-category:document.getElementById("category").value,
+category:document.getElementById("method").value,
 
 amount:document.getElementById("amount").value,
 
