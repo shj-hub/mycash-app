@@ -112,17 +112,20 @@ memo:document.getElementById("memo").value
 
 };
 
+
 google.script.run
-.withSuccessHandler(function(){
-
-alert("保存しました");
-
+  .withSuccessHandler(function () {
+    alert("保存しました");
+  
 document.getElementById("amount").value="";
 document.getElementById("memo").value="";
 
 })
-.saveData(data);
 
+  .withFailureHandler(function (err) {
+    alert("エラー:\n" + err.message);
+  })
+  .saveData(data);
 }
 
 </script>
