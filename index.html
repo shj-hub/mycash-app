@@ -113,6 +113,7 @@ memo:document.getElementById("memo").value
 };
 
 
+
 google.script.run
   .withSuccessHandler(function () {
     alert("保存しました");
@@ -126,6 +127,11 @@ document.getElementById("memo").value="";
     alert("エラー:\n" + err.message);
   })
   .saveData(data);
+}
+
+function testSpreadsheet() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  Logger.log(ss);
 }
 
 </script>
