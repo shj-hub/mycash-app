@@ -94,6 +94,10 @@ placeholder="メモ">
 
 document.getElementById("date").valueAsDate=new Date();
 
+function doGet() {
+  return HtmlService.createHtmlOutputFromFile("index");
+}
+
 function save(){
 
 const data={
